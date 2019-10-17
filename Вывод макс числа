@@ -1,0 +1,38 @@
+package com.company;
+
+import java.io.PrintStream;
+import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Random rand = new Random();
+        // Создаем Васин массив
+        int[] vas_ar = new int[10];
+        // Заполняем Васин массив случайными значениями
+        for (int i = 0; i < vas_ar.length; i++){
+            vas_ar[i] = rand.nextInt(200);
+            System.out.print("\t" + vas_ar[i]);
+        }
+        // Создаем Петин массив
+        int[] pet_ar = new int[10];
+        // Заполняем Петин массив случайными значениями
+        for (int i = 0; i < pet_ar.length; i++){
+            pet_ar[i] = rand.nextInt(100);
+            System.out.print("\t" + pet_ar[i]);
+        }
+        // Создаем переменную для максимума в Петином массиве
+        int pet_max = pet_ar[0];
+        // Ищем максимум в Петином массиве
+        for (int i = 0; i < pet_ar.length; i++){
+            if (pet_ar[i] > pet_max){
+                pet_max = pet_ar[i];
+            }
+        }
+        // Выводим максимум Петиного массива
+        System.out.println(pet_max);
+
+    }
+}
