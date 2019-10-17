@@ -9,29 +9,39 @@ public class Main {
 
     public static void main(String[] args) {
         Random rand = new Random();
-        // Создаем Васин массив
+        // Создаем первый массив
         int[] vas_ar = new int[10];
-        // Заполняем Васин массив случайными значениями
+        // Заполняем первый массив случайными значениями
         for (int i = 0; i < vas_ar.length; i++){
             vas_ar[i] = rand.nextInt(200);
             System.out.print("\t" + vas_ar[i]);
         }
-        // Создаем Петин массив
+        // Создаем переменную для максимума в первом массиве
+        int vas_max = vas_ar[0];
+        // Ищем максимум в первом массиве
+        for (int i = 0; i < vas_ar.length; i++){
+            if (vas_ar[i] > vas_max){
+                vas_max = vas_ar[i];
+            }
+        }
+        // Выводим максимум первого массива
+        System.out.println(vas_max);
+        // Создаем второй массив
         int[] pet_ar = new int[10];
-        // Заполняем Петин массив случайными значениями
+        // Заполняем второй массив случайными значениями
         for (int i = 0; i < pet_ar.length; i++){
             pet_ar[i] = rand.nextInt(100);
             System.out.print("\t" + pet_ar[i]);
         }
-        // Создаем переменную для максимума в Петином массиве
+        // Создаем переменную для максимума в втором массиве
         int pet_max = pet_ar[0];
-        // Ищем максимум в Петином массиве
+        // Ищем максимум в втором массиве
         for (int i = 0; i < pet_ar.length; i++){
             if (pet_ar[i] > pet_max){
                 pet_max = pet_ar[i];
             }
         }
-        // Выводим максимум Петиного массива
+        // Выводим максимум втором массива
         System.out.println(pet_max);
 
     }
