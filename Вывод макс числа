@@ -19,7 +19,7 @@ public class Main {
         // Создаем переменную для максимума в первом массиве
         int vas_max = vas_ar[0];
         // Ищем максимум в первом массиве
-        for (int i = 0; i < vas_ar.length; i++){
+        for (int i = 1; i < vas_ar.length; i++){
             if (vas_ar[i] > vas_max){
                 vas_max = vas_ar[i];
             }
@@ -36,7 +36,7 @@ public class Main {
         // Создаем переменную для максимума в втором массиве
         int pet_max = pet_ar[0];
         // Ищем максимум в втором массиве
-        for (int i = 0; i < pet_ar.length; i++){
+        for (int i = 1; i < pet_ar.length; i++){
             if (pet_ar[i] > pet_max){
                 pet_max = pet_ar[i];
             }
